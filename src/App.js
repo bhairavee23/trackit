@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import './assets/main.css';
 import './App.css';
+import Layout from './Layout';
+import OptionCard from './components/OptionCard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="space-y-3 divide-y divide-red-700">
+        <Layout>
+            <div className="py-16 xl:py-12 flex flex-row justify-center flex-wrap">
+                <OptionCard cardDetails="This is the book's card"/>
+                <OptionCard cardDetails="This is the tv shows' card"/>
+            </div>
+        </Layout>
+        <div>
+            Footer
+        </div>
+      </div>
     </div>
   );
 }
